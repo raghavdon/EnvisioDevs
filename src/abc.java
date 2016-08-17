@@ -1,3 +1,6 @@
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -7,13 +10,7 @@ import java.util.ArrayList;
 
 public class abc {
 
-	public static void main(String [] args){
-		abc v=new abc();
-		ArrayList<String> al=v.place();
-		for(int i=0;i<al.size();i++){
-			System.out.println(al);
-		}
-	}
+	
 	public ArrayList<String> place () {
 		// TODO Auto-generated method stub
 		ArrayList<String> al=new ArrayList<String>();
@@ -64,6 +61,24 @@ public class abc {
 		}
 		
 		return al;
+	}
+	
+	public ArrayList<String> place2 (String ss) throws Exception {
+		// TODO Auto-generated method stub
+		ArrayList<String> al2=new ArrayList<String>();
+		
+		 FileInputStream fstream = new FileInputStream(ss);
+	        BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
+	        String line;
+	        while ((line = br.readLine())!= null)   
+	        {
+	        	try{
+	        	String[] s=line.split("\t");
+	        	al2.add(s[1]+"~"+s[2]+"~"+s[3]);
+	        	}catch(Exception c){}
+	        }
+	        br.close();
+		return al2;
 	}
 
 }

@@ -63,7 +63,8 @@ implementation of this approach.</p>
 <p>
 Create a simple application , integrate google maps, fetch latitude/longitude of places in Pune of your
 choice from the database(Create one!) and use markers to display those places in the map.</p>
-<a href="Question3.jsp"><font size="5" face="Georgia"><em>SOLUTION</em></font></a>
+<a href="Question3.jsp"><font size="5" face="Georgia"><em>SOLUTION (with Database)</em></font></a><br><br>
+<a href="cordinates2"><font size="5" face="Georgia"><em>SOLUTION (with File)</em></font></a>
 </div>
 </body>
 </html>

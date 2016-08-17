@@ -13,14 +13,14 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class cordinates
  */
-@WebServlet("/cordinates")
-public class cordinates extends HttpServlet {
+@WebServlet("/cordinates2")
+public class cordinates2 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public cordinates() {
+    public cordinates2() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -31,9 +31,11 @@ public class cordinates extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		 abc ob=new abc();
-		 ArrayList<String> al=ob.place();
+		 ArrayList<String> al;
+		try {
+			String path=getServletContext().getRealPath("data.txt");
+			al = ob.place2(path);
 		
-		 try{
 				response.setContentType("text/html");
 				PrintWriter out=response.getWriter();
 				out.write("<html><head><title>CORDINATES</title>"
@@ -56,12 +58,13 @@ public class cordinates extends HttpServlet {
 				out.write("</body></html>");
 			}
 			catch (Exception ex) {
-				
+			
+				ex.printStackTrace();
 						response.setContentType("text/html");
 						PrintWriter out=response.getWriter();
 						
 						out.println("<html><head></head><body>");
-				   		out.println("<script>alert('This  is under construction');window.location='index.jsp';</script>");
+				   		out.println("<script>alert('error');window.location='index.jsp';</script>");
 				   		
 				   		out.println("</body></html>");
 				   		

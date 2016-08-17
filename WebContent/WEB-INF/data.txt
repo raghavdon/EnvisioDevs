@@ -1,0 +1,10 @@
+1	Pune Junction railway station	73.8744	18.5289
+2	Shivajinagar railway station	73.8517	18.5322
+3	Aga Khan Palace	73.9015	18.5523
+4	Shaniwar Wada	73.8554	18.5196
+5	Parvati Hill	73.8467	18.4969
+6	Rajiv Gandhi Zoological Park	73.8599	18.4543
+7	Mulshi Dam	73.465	18.5441
+8	Raja Dinkar Kelkar Museum	73.8545	18.5108
+9	Bund Garden	73.8816	18.5421
+10	Pune Airport	73.9087	18.5791
